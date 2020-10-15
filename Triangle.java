@@ -1,4 +1,4 @@
-//Mark Ewert
+//Mark Ewert :)
 //Oct 13, 2020
 
 import java.util.Scanner;
