@@ -17,13 +17,11 @@ public class Triangle2{
 
         System.out.print("What character do you want your isosceles triangle made of? ");
         String charToUse = sc.next();
-        System.out.print("How tall do you want your triangle? (Only odd numbers are permitted) ");
-        num = sc.nextInt();
+        System.out.print("How tall do you want your triangle? ");
+        int height = sc.nextInt();
+        num = (height*2)-1;
         System.out.println("");
-        while (num % 2 == 0) {
-            System.out.print("Please input an odd number ");
-            num = sc.nextInt();
-        }
+
         System.out.println("Here's your triangle");
         System.out.println("");
         for (int i = 1; i <= num; i++){
