@@ -8,13 +8,19 @@ public class GuessingGame{
         Scanner sc = new Scanner(System.in);
         int chosenNumber = (int)(Math.random()*100)+1;
         int guessTally = 0;
+        int guess = 0;
 
         System.out.println("I've picked a random number between 1 and 100. Try to guess it!");
-        System.out.print("What is your guess? ");
-        int guess = sc.nextInt();
-        if (chosenNumber < 1 || 100 < chosenNumber) System.out.println("It's between 1 and 100 remember?");
-        else if (chosenNumber > guess) System.out.println("Too high...");
-        else System.out.print("What is your guess? ");
-
+        while(guess!= chosenNumber){
+            System.out.print("What is your guess? ");
+            guess = sc.nextInt();
+            if (guess < 1 || 100 < guess) System.out.println("It's between 1 and 100 remember?");
+            else if (guess > chosenNumber) System.out.println("Too high...");
+            else if (guess < chosenNumber) System.out.println("Too low... ");
+            guessTally++;
+        }
+        System.out.println("");
+        System.out.print("You've guessed my number! Good job! ");
+        System.out.println("It only took you " + guessTally + " tries");
     }
 }

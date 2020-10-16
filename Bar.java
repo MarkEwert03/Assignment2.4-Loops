@@ -15,6 +15,7 @@ public class Bar{
         
         System.out.println("");
         System.out.println("Here's your bar!");
+        System.out.println("");
         for (int i = 0; i < x; i++){
           System.out.print(charToUse);
         }

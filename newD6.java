@@ -25,7 +25,11 @@ public class newD6{
             System.out.print("Again? [y, n] ");
             String response = sc.next();
             if ("y".equals(response)) System.out.println("");
-            else continuing = false;
+            else if ("y".equals(response))continuing = false;
+            else {
+                System.out.println("That is not a valid response. Terminating game now");
+                continuing = false;
+            }
         }
     }
 }
